@@ -1,3 +1,3 @@
 var someVar = 'text';
-console.log('this shouldt work', someVar.foo());
+console.log('this should work', someVar);
 //# sourceMappingURL=main.js.map
