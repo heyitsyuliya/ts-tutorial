@@ -23,3 +23,13 @@ const htmlElement = document.querySelector('.profile') as HTMLInputElement;
 // we have access to all html element properties
 console.log('new html element', htmlElement.value)
 
+
+// EVENT LISTENERS
+const listenToMe = document.querySelector('.listen-to-me')
+// in this case event is also ageneric super class, just like html element
+listenToMe.addEventListener('blur', (event) => {
+  // event.target.value will not be accessible at this point, as event class is generic
+  // ow that we specify correct type of the element we're dealing with, target is accesible
+  const target = event.target as HTMLInputElement
+  console.log("event's target", target)
+})
