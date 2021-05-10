@@ -80,3 +80,19 @@ class Cat implements CatInterface {
 }
 
 
+// INHERITANCE IN TYPESCRIPT
+
+class Trixie extends Cat {
+  private canScratch: string;
+
+  setCanScratch(canScratch: string): void {
+    this.canScratch = canScratch;
+  }
+
+  getCanScratch(): string {
+    return this.canScratch
+  }
+}
+
+const trixieCat = new Cat('Trixie');
+console.log(trixieCat)
